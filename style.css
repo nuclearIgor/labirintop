@@ -1,0 +1,39 @@
+body, html, div, section, span{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#main{
+    width: 630px;
+    margin: 0 auto;
+}
+
+.linha{
+    display: flex;
+    width: 100%;
+    height: 30px;
+    /* margin-bottom: 10px; */
+    background-color: aqua;
+}
+.space{
+    width: 30px;
+    /* height: 100%; */
+}
+.wall{
+    width: 30px;
+    /* height: 100%; */
+    /* margin: 2px 2px; */
+    background-color: black;
+}
+.start{
+    width: 30px;
+}
+.finish{
+    width: 30px;
+}
+#player{
+    background-color: green;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+}
