@@ -1,13 +1,17 @@
 
 let igor = main.childNodes
 
+const winMessage = document.getElementById('win-message')
+
+const resetButton = document.getElementById('reset-button')
+
 const vitoria = ()=>{
-    // console.log(finish.childElementCount)
     if(finish.childElementCount > 0){
     
-    criadiv('h2', 'win', document.body)
+    criadiv('h2', 'win', winMessage)
             const win = document.querySelector('.win')
-            return  win.innerText = 'Você venceu'
+            win.innerText = 'Você venceu'
+            return resetButton.classList.remove('hidden') 
     }
 }
 
@@ -80,4 +84,8 @@ document.addEventListener('keydown', (event) => {
 })
 
 
+const resetgame = ()=>{
+    return location.reload()
+}
+resetButton.addEventListener('click', resetgame)
 

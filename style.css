@@ -32,3 +32,23 @@ body, html, div, section, span, h2{
     height: 30px;
     width: 30px;
 }
+.win{
+    margin: 0 auto;
+    text-align: center;
+}
+#info{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.hidden{
+    display: none;
+}
+#reset-button{
+    margin: 0 auto;
+    width: 200px;
+    height: 30px;
+    background-color: green;
+    font-size: large;
+    border: black 2px solid;
+}
