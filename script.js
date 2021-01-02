@@ -16,6 +16,9 @@ const map = [
     "WWWWWWWWWWWWWWWWWWWWW",
 ];
 
+
+
+
 const main = document.getElementById('main')
 
 const criadiv = (elemento, classe, elementopai, id)=>{
@@ -26,27 +29,29 @@ const criadiv = (elemento, classe, elementopai, id)=>{
 }
 
 
-const criatabuleiro=()=>{
-for(let i = 0; i < map.length; i++){
+const criatabuleiro=(a)=>{
+for(let i = 0; i < a.length; i++){
     criadiv('div', 'linha', main, `linha${i}`)
     
-    for(let j = 0; j < map[i].length; j++){
-        if(map[i][j] === 'W'){
-        criadiv('div', 'wall', document.getElementById(`linha${i}`))
+    for(let j = 0; j < a[i].length; j++){
+        if(a[i][j] === 'W'){
+        criadiv('div', 'wall', document.getElementById(`linha${i}`), `linha${i}indice${j}`)
+        
         }
-        else if(map[i][j] === ' '){
-            criadiv('div', 'space', document.getElementById(`linha${i}`))
+        else if(a[i][j] === ' '){
+            criadiv('div', 'space', document.getElementById(`linha${i}`), `linha${i}indice${j}`)
         }
-        else if(map[i][j] === 'S'){
-            criadiv('div', 'start', document.getElementById(`linha${i}`))
+        else if(a[i][j] === 'S'){
+            criadiv('div', 'start', document.getElementById(`linha${i}`),`linha${i}indice${j}`)
         }
-        else if(map[i][j] === 'F'){
-            criadiv('div', 'finish', document.getElementById(`linha${i}`))
+        else if(a[i][j] === 'F'){
+            criadiv('div', 'finish', document.getElementById(`linha${i}`),`linha${i}indice${j}`)
         }
     }
 }
 }
-criatabuleiro()
+criatabuleiro(map)
+
 const start = document.querySelector('.start')
 const finish = document.querySelector('.finish')
 
